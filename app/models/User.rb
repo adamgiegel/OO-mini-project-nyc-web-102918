@@ -13,8 +13,14 @@ class User
     @@all
   end
 
-  def recipes
-    RecipeCard.all.select { |recipes| recipes.recipe == self}
+  def recipe_cards
+    RecipeCard.all.select { |recipe_card| recipe_card.user == self}
+  end
+
+  def recipes #Returns an array of recipes belonging to this user
+    self.recipe_cards.map do |recipe_card|
+      recipe_card.recipe
+    end
   end
 
   def add_recipe_card(recipe, date, rating)
