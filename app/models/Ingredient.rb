@@ -4,8 +4,7 @@ class Ingredient
 
   @@all = []
 
-  def initialize(argument)
-    @argument = argument
+  def initialize
     @@all << self
   end
 

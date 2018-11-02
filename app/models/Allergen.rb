@@ -2,10 +2,12 @@ class Allergen
 
   attr_accessor :ingredient, :user
 
-  @ingredient = []
+  # @ingredient = []
 
-  def initialize
-    @ingredient << self
+  def initialize(ingredient, user)
+    @ingredient = ingredient
+    @user = user
+    # @ingredient << self
   end
 
 end

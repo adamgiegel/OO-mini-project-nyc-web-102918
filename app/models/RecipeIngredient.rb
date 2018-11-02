@@ -8,7 +8,7 @@ attr_accessor :ingredient, :recipe  #because it's
     @@ll << self
   end
 
-  def sef.all
+  def self.all
     @@all
   end
 

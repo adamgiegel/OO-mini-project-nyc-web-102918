@@ -1,6 +1,6 @@
 class User
 
-  attr_accessor :recipecard, :allergen, :name
+  attr_accessor :recipecard, :allergen, :name, :ingredient
 
   @@all=[]
 
@@ -26,10 +26,7 @@ class User
   end
 
   def allergens
-    ingredient.map()
+    ingredient.map(&:allegens)
   end
 
-  def patients
-      appointments.map(&:patient)
-    end
 end
